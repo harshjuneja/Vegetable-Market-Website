@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>ML Model Input Form</h1>
+    <form method="POST" action="/">
+        <label for="item_id">Item ID:</label>
+        <select name="item_id" required>
+            <option value="1">radish</option>
+            <option value="2">brinjal</option>
+            <option value="3">cabbage</option>
+            <option value="4">cauliflower</option>
+            <option value="5">green chilly</option>
+            <option value="6">cucumber</option>
+            <option value="7">garlic</option>
+            <option value="8">ginger</option>
+            <option value="9">okra</option>
+            <option value="10">onion</option>
+            <option value="11">peas</option>
+            <option value="12">pointed ground</option>
+            <option value="13">potato</option>
+            <option value="14">pumkin</option>
+            <option value="15">radish</option>
+            <option value="16">tomato</option>
+        </select><br><br>
+
+        <label for="temperature">Temperature:</label>
+        <input type="text" name="temperature" required><br><br>
+
+
+        <label for="month">Month:</label>
+        <select name="month" required>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select><br><br>
+        <label for="fresh">Fresh:</label>
+        <select name="fresh" required>
+            <option value="0">Scrap</option>
+            <option value="1">Avarage</option>
+            <option value="2">Fresh</option>
+        </select><br><br>
+        <label for="disasters">Disasters:</label>
+        <select name="disasters" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
